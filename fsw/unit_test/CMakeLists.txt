@@ -29,10 +29,10 @@ target_link_libraries(LC-UT -fprofile-arcs gcov ${CMAKE_THREAD_LIBS_INIT})
 add_test(NAME lc-ut
     COMMAND ${CMAKE_COMMAND}
     	-DTEST_PROG=$<TARGET_FILE:LC-UT>
-    	-DEXPECTED_OUTPUT=${UNIT_TEST_INPUT_DIR}/output_CDS/lc_utest.out
+    	-DEXPECTED_OUTPUT=${CMAKE_CURRENT_SOURCE_DIR}/output_CDS/lc_utest.out
     	-DACTUAL_OUTPUT=${CMAKE_CURRENT_BINARY_DIR}/lc_utest.out
     -P ${CMAKE_CURRENT_SOURCE_DIR}/runtest.cmake)
 
 # Copy input files to build directory
-configure_file(${UNIT_TEST_INPUT_DIR}/lc_utest.in ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/lc_utest.in ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
 
