@@ -355,7 +355,7 @@ ERROR EVENT ID=62 AP evaluated to error: AP = 75, Result = 2
 
 Test sample single AP message, PASS to FAIL Transition
 -----------------------------------------------------
-> CMD: APID:00a9 SEQ:0 LEN:10 FC:4 PKT:18a9 c000 0003 0400 0014 
+> CMD: APID:00a9 SEQ:0 LEN:10 FC:4 PKT:a918 00c0 0300 0400 0014 
 INFO EVENT ID=455 Test event text: AP = 75, FailCount = 1, RTS = 20
 
 LC ART DATA FOR ENTRY #75:
@@ -466,7 +466,7 @@ SysLog:1980-001-00:00:00.00000 CFE_TBL:GetAddressInternal-App(0) using invalid T
 ERROR EVENT ID=19 Error getting WDT address, RC=0xCC000001
 ERROR EVENT ID=24 Invalid command code: ID = 0x18A4, CC = 99
 ERROR EVENT ID=43 Invalid msg length: ID = 0x18A4, CC = 0, Len = 48, Expected = 8
-INFO EVENT ID=26 No-op command: Version 0.0.0.0
+INFO EVENT ID=26 No-op command: Version 2.0.0.0
 ERROR EVENT ID=43 Invalid msg length: ID = 0x18A4, CC = 1, Len = 48, Expected = 8
 DEBUG EVENT ID=27 Reset counters command
 ERROR EVENT ID=43 Invalid msg length: ID = 0x18A4, CC = 2, Len = 48, Expected = 12
@@ -568,4 +568,4 @@ SysLog:1980-001-00:00:00.00000 CFE_TBL:ValidateHandle-Table Handle=0 is for unus
 SysLog:1980-001-00:00:00.00000 CFE_TBL:ValidateAccess-Invalid Tbl Handle=0
 SysLog:1980-001-00:00:00.00000 CFE_TBL:Unregister-App(0) does not have access to Tbl Handle=0
 ERROR EVENT ID=92 LC Failed to Unregister '?', Status=0xCC000001
-INFO EVENT ID=2 LC Initialized. Version 0.0.0.0
+INFO EVENT ID=2 LC Initialized. Version 2.0.0.0
