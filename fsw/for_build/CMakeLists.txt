@@ -18,11 +18,11 @@ include_directories(${OSAL_INC_DIRS})
 include_directories(${PSP_INC_DIRS})
 	
 # Build application
-add_library(${APP_FILE} SHARED ${APP_SRC})
+add_app(${APP_FILE} SHARED ${APP_SRC})
 
 # Build tables
-add_library(lc_def_adt STATIC ${TABLE_DIR}/lc_def_adt.c)
-add_library(lc_def_wdt STATIC ${TABLE_DIR}/lc_def_wdt.c)
+add_app(lc_def_adt STATIC ${TABLE_DIR}/lc_def_adt.c)
+add_app(lc_def_wdt STATIC ${TABLE_DIR}/lc_def_wdt.c)
 set_target_properties(lc_def_adt PROPERTIES PREFIX "" SUFFIX ".tbl")
 set_target_properties(lc_def_wdt PROPERTIES PREFIX "" SUFFIX ".tbl")
 
